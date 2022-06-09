@@ -1,26 +1,26 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Pakage ต่างๆ') }}
+            {{ __('Package ต่างๆ') }}
         </h2>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto xxl:px-10 xl:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <table class="table table-bordered">
+                <table class="table table-striped table-bordered">
                     <div class="container">
                         <tr>
                             <td></td>
-                            <td colspan="1" align="center"><button class="btn btn-primary">ฟรี Package</button></td>
-                            <td colspan="1" align="center"><button class="btn btn-primary">Package A</button></td>
-                            <td colspan="1" align="center"><button class="btn btn-primary">Package B</button></td>
-                            <td colspan="1" align="center"><button class="btn btn-primary">Package C</button></td>
+                            <td colspan="1" align="center"><a href="{{url('/pack?key=0')}}"><button class="btn btn-primary">ฟรี Package</button></a></td>
+                            <td colspan="1" align="center"><a href="{{url('/pack?key=1')}}"><button class="btn btn-primary">Package A</button></a></td>
+                            <td colspan="1" align="center"><a href="{{url('/pack?key=2')}}"><button class="btn btn-primary">Package B</button></a></td>
+                            <td colspan="1" align="center"><a href="{{url('/pack?key=3')}}"><button class="btn btn-primary">Package C</button></a></td>
                         </tr>
                         <tr>
                             <th>ราคา</th>
                             <th class="text-center">Free</th>
-                            <th class="text-center">599 ต่อเดือน / 5000 ต่อปี</th>
+                            <th class="text-center">ต่อเดือน / 5000 ต่อปี</th>
                             <th class="text-center">699 ต่อเดือน / 8000 ต่อปี</th>
                             <th class="text-center">999 ต่อเดือน / 10000 ต่อปี</th>
                         </tr>
@@ -124,13 +124,13 @@
                         </tr>
                     </div>
                 </table>
-                <table class="table table-bordered">
+                <table class="table table-striped table-bordered">
                     <div class="container">
                         <tr>
                             <td></td>
-                            <td colspan="1" align="center"><button class="btn btn-primary">Package D</button></td>
-                            <td colspan="1" align="center"><button class="btn btn-primary">Package E</button></td>
-                            <td colspan="1" align="center"><button class="btn btn-primary">Package F</button></td>
+                            <td colspan="1" align="center"><a href="{{url('/pack?key=4')}}"><button class="btn btn-primary">Package D</button></td>
+                            <td colspan="1" align="center"><a href="{{url('/pack?key=5')}}"><button class="btn btn-primary">Package E</button></td>
+                            <td colspan="1" align="center"><a href="{{url('/pack?key=6')}}"><button class="btn btn-primary">Package F</button></td>
                         </tr>
                         <tr>
                             <th>ราคา</th>

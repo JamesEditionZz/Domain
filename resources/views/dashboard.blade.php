@@ -222,6 +222,16 @@
                             <th class="text-center">100 ชิ้น</th>
                             <th class="text-center">200 ชิ้น</th>
                         </tr>
+                        <tr>
+                            <th></th>
+                                <th colspan="4" class="p-3 mb-2 bg-warning text-dark text-center">พิเศษ!!!! สำหรับแพค D-F จ่ายรายเดือน(เซ็นสัญญา 2ปี) รับฟรี! ออกแบบ Video Light Weight Motion Graphic</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th colspan="1" class="p-3 mb-2 bg-warning text-dark text-center">1ชิ้น / ปี</th>
+                            <th colspan="1" class="p-3 mb-2 bg-warning text-dark text-center">3ชิ้น / ปี</th>
+                            <th colspan="1" class="p-3 mb-2 bg-warning text-dark text-center">5ชิ้น / ปี</th>
+                        </tr>
                     </div>
                 </table>
             </div>

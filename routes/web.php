@@ -31,4 +31,8 @@ Route::get('/admin', function () {
     return view('admin');
 });
 
+Route::get('/admin2', function () {
+    return view('admin2');
+});
+
 // Route::get('/admin',[App\Http\Controllers\AdminController::class,'index']);

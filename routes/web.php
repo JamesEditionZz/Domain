@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,8 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+Route::get('/admin', function () {
+    return view('admin');
+});
+
+// Route::get('/admin',[App\Http\Controllers\AdminController::class,'index']);

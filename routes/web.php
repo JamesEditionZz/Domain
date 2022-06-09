@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route; 
 use App\Http\Controllers\Packagecontroller;
 use Illuminate\Support\Facades\App;
+use App\Http\Controllers\Admin2Controller;
+use App\Http\Controllers\AdminController;
 
 
 Route::get('/', function () {
@@ -21,12 +23,8 @@ Route::middleware([
 
 Route::get('/pack',[Packagecontroller::class,'package']);
 
-Route::get('/admin', function () {
-    return view('admin');
-});
+Route::get('/admin',[AdminController::class,'index']);
 
-Route::get('/admin2', function () {
-    return view('admin2');
-});
+Route::get('/admin2',[Admin2Controller::class,'index']);
 
 ?>

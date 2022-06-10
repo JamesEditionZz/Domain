@@ -12,15 +12,15 @@
                     <div class="container">
                         <tr>
                             <td></td>
-                            <td colspan="1" align="center"><a href="{{url('/pack?key=0')}}"><button class="btn btn-primary">ฟรี Package</button></a></td>
-                            <td colspan="1" align="center"><a href="{{url('/pack?key=1')}}"><button class="btn btn-primary">Package A</button></a></td>
-                            <td colspan="1" align="center"><a href="{{url('/pack?key=2')}}"><button class="btn btn-primary">Package B</button></a></td>
-                            <td colspan="1" align="center"><a href="{{url('/pack?key=3')}}"><button class="btn btn-primary">Package C</button></a></td>
+                            <td colspan="1" align="center"><a href="{{url('/pack?key=1')}}"><button class="btn btn-primary">ฟรี Package</button></a></td>
+                            <td colspan="1" align="center"><a href="{{url('/pack?key=2')}}"><button class="btn btn-primary">Package A</button></a></td>
+                            <td colspan="1" align="center"><a href="{{url('/pack?key=3')}}"><button class="btn btn-primary">Package B</button></a></td>
+                            <td colspan="1" align="center"><a href="{{url('/pack?key=4')}}"><button class="btn btn-primary">Package C</button></a></td>
                         </tr>
                         <tr>
                             <th>ราคา</th>
                             <th class="text-center">Free</th>
-                            <th class="text-center">ต่อเดือน / 5000 ต่อปี</th>
+                            <th class="text-center">599 ต่อเดือน / 5000 ต่อปี</th>
                             <th class="text-center">699 ต่อเดือน / 8000 ต่อปี</th>
                             <th class="text-center">999 ต่อเดือน / 10000 ต่อปี</th>
                         </tr>
@@ -128,9 +128,9 @@
                     <div class="container">
                         <tr>
                             <td></td>
-                            <td colspan="1" align="center"><a href="{{url('/pack?key=4')}}"><button class="btn btn-primary">Package D</button></td>
-                            <td colspan="1" align="center"><a href="{{url('/pack?key=5')}}"><button class="btn btn-primary">Package E</button></td>
-                            <td colspan="1" align="center"><a href="{{url('/pack?key=6')}}"><button class="btn btn-primary">Package F</button></td>
+                            <td colspan="1" align="center"><a href="{{url('/pack?key=5')}}"><button class="btn btn-primary">Package D</button></td>
+                            <td colspan="1" align="center"><a href="{{url('/pack?key=6')}}"><button class="btn btn-primary">Package E</button></td>
+                            <td colspan="1" align="center"><a href="{{url('/pack?key=7')}}"><button class="btn btn-primary">Package F</button></td>
                         </tr>
                         <tr>
                             <th>ราคา</th>

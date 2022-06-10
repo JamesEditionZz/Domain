@@ -26,6 +26,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('pack_id');
             $table->string('status');
+            $table->string('template');
         });
     }
 

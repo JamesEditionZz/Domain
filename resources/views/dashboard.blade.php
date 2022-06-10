@@ -1,18 +1,18 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Package ต่างๆ') }}
+            {{ __('ข้อมูลและรายละเอียดของ Package ต่างๆ') }}
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-6">
         <div class="max-w-7xl mx-auto xxl:px-10 xl:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <table class="table table-striped table-bordered">
                     <div class="container">
                         <tr>
-                            <td></td>
-                            <td colspan="1" align="center"><a href="{{url('/pack?key=0')}}"><button class="btn btn-primary">ฟรี Package</button></a></td>
+                            <th class="text-center" align="center"><h4>รายละเอียด Package</h4></th>
+                            <td colspan="1" align="center"><a href="{{url('/pack?key=0')}}"><button class="btn btn-primary">Free Package</button></a></td>
                             <td colspan="1" align="center"><a href="{{url('/pack?key=1')}}"><button class="btn btn-primary">Package A</button></a></td>
                             <td colspan="1" align="center"><a href="{{url('/pack?key=2')}}"><button class="btn btn-primary">Package B</button></a></td>
                             <td colspan="1" align="center"><a href="{{url('/pack?key=3')}}"><button class="btn btn-primary">Package C</button></a></td>
@@ -124,10 +124,17 @@
                         </tr>
                     </div>
                 </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-3">
+        <div class="max-w-7xl mx-auto xxl:px-10 xl:px-8">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <table class="table table-striped table-bordered">
                     <div class="container">
                         <tr>
-                            <td></td>
+                            <th class="text-center" align="center"><h4>รายละเอียด Package</h4></th>
                             <td colspan="1" align="center"><a href="{{url('/pack?key=4')}}"><button class="btn btn-primary">Package D</button></td>
                             <td colspan="1" align="center"><a href="{{url('/pack?key=5')}}"><button class="btn btn-primary">Package E</button></td>
                             <td colspan="1" align="center"><a href="{{url('/pack?key=6')}}"><button class="btn btn-primary">Package F</button></td>
@@ -234,7 +241,9 @@
                         </tr>
                     </div>
                 </table>
+                <br>
             </div>
         </div>
     </div>
+
 </x-app-layout>

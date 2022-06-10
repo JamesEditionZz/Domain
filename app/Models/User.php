@@ -27,6 +27,8 @@ class User extends Authenticatable
         'name',
         'email',
         'telephone',
+        'pack_id',
+        'status',
         'password',
     ];
 

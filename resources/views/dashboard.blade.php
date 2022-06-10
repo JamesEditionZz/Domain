@@ -12,10 +12,10 @@
                     <div class="container">
                         <tr>
                             <td></td>
-                            <td colspan="1" align="center"><a href="{{url('/pack?key=1')}}"><button class="btn btn-primary">ฟรี Package</button></a></td>
-                            <td colspan="1" align="center"><a href="{{url('/pack?key=2')}}"><button class="btn btn-primary">Package A</button></a></td>
-                            <td colspan="1" align="center"><a href="{{url('/pack?key=3')}}"><button class="btn btn-primary">Package B</button></a></td>
-                            <td colspan="1" align="center"><a href="{{url('/pack?key=4')}}"><button class="btn btn-primary">Package C</button></a></td>
+                            <td colspan="1" align="center"><a href="{{url('/template?key=1')}}"><button class="btn btn-primary">ฟรี Package</button></a></td>
+                            <td colspan="1" align="center"><a href="{{url('/template?key=2')}}"><button class="btn btn-primary">Package A</button></a></td>
+                            <td colspan="1" align="center"><a href="{{url('/template?key=3')}}"><button class="btn btn-primary">Package B</button></a></td>
+                            <td colspan="1" align="center"><a href="{{url('/template?key=4')}}"><button class="btn btn-primary">Package C</button></a></td>
                         </tr>
                         <tr>
                             <th>ราคา</th>
@@ -135,9 +135,9 @@
                     <div class="container">
                         <tr>
                             <td></td>
-                            <td colspan="1" align="center"><a href="{{url('/pack?key=5')}}"><button class="btn btn-primary">Package D</button></td>
-                            <td colspan="1" align="center"><a href="{{url('/pack?key=6')}}"><button class="btn btn-primary">Package E</button></td>
-                            <td colspan="1" align="center"><a href="{{url('/pack?key=7')}}"><button class="btn btn-primary">Package F</button></td>
+                            <td colspan="1" align="center"><a href="{{url('/template?key=5')}}"><button class="btn btn-primary">Package D</button></td>
+                            <td colspan="1" align="center"><a href="{{url('/template?key=6')}}"><button class="btn btn-primary">Package E</button></td>
+                            <td colspan="1" align="center"><a href="{{url('/template?key=7')}}"><button class="btn btn-primary">Package F</button></td>
                         </tr>
                         <tr>
                             <th>ราคา</th>

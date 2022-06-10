@@ -1,4 +1,6 @@
 <x-app-layout>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             @if ($value == '1')
@@ -87,6 +89,25 @@
                             <th>ข้อมูลสินค้า</th>
                             <th>X</th>
                         </tr>
+                        <tr>
+                            <th></th>
+                            <th colspan="2"><form name="checkoutForm" method="POST" action="{{ url('checkout') }}">
+                                <script type="text/javascript" src="https://cdn.omise.co/omise.js"
+                                  data-key="pkey_test_5s3f8hlot89cyz5wdbf"
+                                  data-frame-label="CLOUD_IDC"
+                                  data-button-label="ชำระเงิน"
+                                  data-submit-label="ชำระเงิน"
+                                  data-location="no"
+                                  data-amount="10025"
+                                  data-currency="thb"
+                                  >
+                                </script>
+                                <!--the script will render <input type="hidden" name="omiseToken"> for you automatically-->
+                              </form></th>
+                        </tr>              
+                              </div>
+                            </div>
+                          </div>
                         @elseif ($value == '2')
                             <tr>
                                 <th>URL</th>

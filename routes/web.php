@@ -5,6 +5,8 @@ use App\Http\Controllers\Packagecontroller;
 use Illuminate\Support\Facades\App;
 use App\Http\Controllers\Admin2Controller;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\TemplateController;
 
 
 Route::get('/', function () {
@@ -26,5 +28,9 @@ Route::get('/pack',[Packagecontroller::class,'package']);
 Route::get('/admin',[AdminController::class,'index']);
 
 Route::get('/admin2',[Admin2Controller::class,'index']);
+
+Route::get('/template',[TemplateController::class,'index']);
+
+Route::POST('/checkout',[CheckoutController::class,'checkout']);
 
 ?>

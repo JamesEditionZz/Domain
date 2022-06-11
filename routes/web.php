@@ -33,4 +33,6 @@ Route::get('/template',[TemplateController::class,'index']);
 
 Route::POST('/checkout',[CheckoutController::class,'checkout']);
 
+Route::get('image/{filename}', 'TemplateController@displayImage')->name('image.displayImage');
+
 ?>

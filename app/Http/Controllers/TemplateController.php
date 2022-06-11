@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\temtheme;
 
 class TemplateController extends Controller
 {
@@ -10,4 +11,5 @@ class TemplateController extends Controller
         $key = $request->key;
         return view('template',['value'=>$key]);
     }
+
 }

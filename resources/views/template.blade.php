@@ -1,7 +1,5 @@
 <x-app-layout>
     <x-slot name="header">
-    
-
     <div class="py-6">
         <div class="container">
             <div class="row">

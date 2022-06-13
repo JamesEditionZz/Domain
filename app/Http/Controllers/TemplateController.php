@@ -10,7 +10,7 @@ use App\Models\temweb;
 class TemplateController extends Controller
 {
     public function index(){
-        $imageData= temtheme::orderBy('id','Desc')->paginate(4);
+        $imageData= temtheme::all();
         $data['business'] = tembusiness::all();
         $data['temweb'] = temweb::all();
         return view('template', compact('imageData'),$data);

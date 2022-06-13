@@ -31,8 +31,7 @@ class ImageUploadController extends Controller
             $theme = new temtheme;
             $theme->business_id = $request->business;
             $theme->web_id = $request->web;
-            $theme->business_name = $request->idb;
-            $theme->web_name = $request->idw;
+            $theme->linkweb = $request->linkweb;
             $theme->image = $data['image'];
             $theme->save();
         }

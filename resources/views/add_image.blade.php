@@ -19,6 +19,8 @@
           <option value="{{$wdata->id}}">{{$wdata->name_web}}</option>
       @endforeach
       </select>
+      <strong>ลิ้งเว็ป</strong>
+      <input type="text" name="linkweb">
       <div class="post_button">
         <button type="submit" class="btn btn-success">Add</button>
       </div>

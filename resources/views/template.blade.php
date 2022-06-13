@@ -1,5 +1,22 @@
 <x-app-layout>
     <x-slot name="header">
+      <style>
+        .photo__grid{
+          margin-top: 2rem;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 2rem;
+        }
+        .photo__grid--item{
+          width: 100%;
+          height: 100%;
+        }
+        .photo__grid--item img{
+          width: 80%;
+          height: 100%;
+          margin:  auto auto;
+        }
+      </style>
     <div class="py-6">
         <div class="container">
             <div class="row">
@@ -37,24 +54,17 @@
         <div class="container p-2 text-center">
             <h3>กรุณาเลือกธีม</h3>
         </div> 
-        <table border="1">
-          <div class="mt-3">
-              <tr>
-                @foreach ($imageData as $theme)
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm-5">
-                        <td>
-                          <img src="{{ url('public/Image/'.$theme->image) }}" style="height: 600px; width: 400;">
-                        </td>
-                    </div>
-                  </div>
-                </div> 
-                @endforeach
-              </tr> 
+        <div class="container">
+          <div class="photo__grid">
+            @foreach ($imageData as $image)
+            <div class="photo__grid--item">
+              <img src="{{ url('public/Image/'.$image->image) }}">
             </div>
-        </table> 
-        {!! $imageData->links() !!}
+            @endforeach
+          </div>
+        </div>
+      </div>
+          
     </div>
 </x-slot>
 </x-app-layout>

@@ -1,5 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <style>
         .photo__grid{
           margin-top: 2rem;
@@ -17,35 +18,23 @@
           margin:  auto auto;
         }
       </style>
+  <body>
     <div class="py-6">
         <div class="container">
             <div class="row">
               <div class="col-sm-3">
                 <p>เลือกประเภทธุรกิจ</p>
-                <select class="form-select" name="selectbus">
-                  @foreach ($business as $Data)
-                    <option>{{$Data->name_business}}</option>
+                <select class="form-select busi" name="busi" id="busi">
+                  <option>{{'กรุณาเลือกธีม'}}</option>
+                  @foreach ($business as $row)
+                    <option value="{{$row->id}}">{{$row->name_business}}</option>
                   @endforeach
                 </select>
               </div>
               <div class="col-sm-3">
-                <p>เลือกประเภทเว็บไซต์</p>
-                <select class="form-select" name="selectweb">
-                  @foreach ($temweb as $wData)
-                      <option>{{$wData->name_web}}</option>
-                  @endforeach
-                </select>
-              </div>
-              <div class="col-sm-3">
-                <p>เลือก Mood&Tone ของสี</p>
-                <select class="form-select" name="selectweb">
-                    <option></option>
-                </select>
-              </div>
-              <div class="col-sm-3">
-                <p>เลือก Mood&Tone ของFont(ตัวอักษร)</p>
-                <select class="form-select" name="selectweb">
-                    <option></option>
+                <p>ประเภทเว็บไซต์</p>
+                <select class="form-select web" name="busi" id="web">
+                  <option></option>
                 </select>
               </div>
             </div>
@@ -56,15 +45,43 @@
         </div> 
         <div class="container">
           <div class="photo__grid">
-            @foreach ($imageData as $image)
             <div class="photo__grid--item">
-              <img src="{{ url('public/Image/'.$image->image) }}">
             </div>
-            @endforeach
           </div>
         </div>
       </div>
-          
     </div>
+    {{ csrf_field() }}
+  </body>
+    <script>
+      $('.busi').change(function(){
+          if($(this).val()!=''){
+              var select=$(this).val();
+              var _token=$('input[name="_token"]').val();
+              $.ajax({
+                  url:"{{route('dropdown.fetch')}}",
+                  method:"POST",
+                  data:{select:select,_token:_token},
+                  success:function(result){
+                      $('.web').html(result);
+                  }
+              })
+          }
+      });
+      $('.web').change(function(){
+          if($(this).val()!=''){
+              var selectweb=$(this).val();
+              var _token=$('input[name="_token"]').val();
+              $.ajax({
+                  url:"{{route('dropdown.fetch')}}",
+                  method:"POST",
+                  data:{selectweb:selectweb,_token:_token},
+                  success:function(result){
+                      $('.img').html(result);
+                  }
+              })
+          }
+      });
+    </script>
 </x-slot>
 </x-app-layout>

@@ -8,6 +8,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\ImageUploadController;
+use App\Models\temtheme;
 
 
 Route::get('/', function () {
@@ -31,6 +32,7 @@ Route::get('admin',[AdminController::class,'index']);
 Route::get('admin2',[Admin2Controller::class,'index']);
 
 Route::get('template',[TemplateController::class,'index']);
+Route::post('template/fetch',[TemplateController::class,'fetch'])->name('dropdown.fetch');
 
 Route::POST('checkout',[CheckoutController::class,'checkout']);
 

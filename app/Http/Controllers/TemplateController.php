@@ -14,9 +14,8 @@ class TemplateController extends Controller
         // $img = DB::table('temthemes')->get();
         return view('template')->with('business',$business);
         // return view('template')->with('image',$img);
-
-        
     }
+
     function fetch(Request $request){
         $id = $request->get('select');
         $result = array();
@@ -26,15 +25,11 @@ class TemplateController extends Controller
         ->groupBy('temwebs.web_id')
         ->get();
 
-        if($id == '1'){
-            $output = '<option value=""></option>';
-        }elseif($id >= '2'){
             $output = '<option value="">เลือกประเภทเว็ปไซต์</option>';
         foreach ($query as $row){
             $output.='<option value ="'.$row->web_id.'">'.$row->name_web.'</option>';
             }
             echo $output;
-        }  
     }
 
     function img(Request $request){

@@ -31,7 +31,8 @@ Route::get('admin',[AdminController::class,'index']);
 
 Route::get('admin2',[Admin2Controller::class,'index']);
 
-Route::get('template',[TemplateController::class,'index'])->name('index');
+Route::get('template',[TemplateController::class,'index'])->name('template');
+
 Route::post('template/fetch',[TemplateController::class,'fetch'])->name('dropdown.fetch');
 Route::post('template/img',[TemplateController::class,'img'])->name('img');
 

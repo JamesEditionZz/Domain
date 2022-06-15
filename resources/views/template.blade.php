@@ -19,7 +19,7 @@
         }
       </style>
   <body>
-    <div class="py-1">
+      <div class="py-1">
         <div class="container">
             <div class="row">
               <div class="col-sm-4">
@@ -35,7 +35,6 @@
                 <input type="file" class="form-control" name="word">
               </div>
             </div>
-
             <div class="py-3">
               <div class="row">
                 <div class="col-sm-4">
@@ -73,23 +72,65 @@
           </div>
               <div class="py-2">
                 <div class="row">
-                    <p>{{'สีที่อยากได้'}}</p>
+                    <p><h4 align="center">{{'สีที่อยากได้และสไตล์ของตัวหนังสือ'}}</h4></p>
                     <div class="col-sm-2">
                       <p>{{'สีที่ 1 (สีหลัก 70%)'}}</p>
                       <input type="color" class="form-control" name="color1">
                     </div>
                     <div class="col-sm-2">
-                      <p>{{'สีที่ 2 (สีหลัก 20%)'}}</p>
+                      <p>{{'สีที่ 2 (สีรอง 20%)'}}</p>
                       <input type="color" class="form-control" name="color2">
                     </div>
                     <div class="col-sm-2">
-                      <p>{{'สีที่ 3 (สีหลัก 10%)'}}</p>
+                      <p>{{'สีที่ 3 (สีรอง 10%)'}}</p>
                       <input type="color" class="form-control" name="color3">
                     </div>
-                    <div class="col-sm-2">
-                      <p>{{'สไตล์ตัวอักษร'}}</p>
-                      <p class="text-oswald"><input type="checkbox" name="font1"> {{'Oswald'}}</p>
+                    <div class="col-sm-1">
+                      
                     </div>
+                    <div class="col-sm-4">
+                      <p align="center">{{'สไตล์ตัวหนังสือ'}}</p>
+                      <input type="radio" id="Oswald" name="Font" value="Oswald">
+                      <label for="Oswald">Oswald</label><span style="padding: 30px"></span>
+                      <input type="radio" id="Josefin Sans" name="Font" value="Josefin Sans">
+                      <label for="Josefin Sans">Josefin Sans</label><span style="padding: 30px"></span>
+                      <input type="radio" id="Cardo" name="Font" value="Cardo">
+                      <label for="Cardo">Cardo</label>
+                    </div>
+                </div>
+              </div>
+              <div class="py-2">
+                <div class="row">
+                  <p><h4 align="center">{{'Arkwork 1'}}</h4></p>
+                  <div class="col-sm-4">
+                    {{'อธิบายสิ่งที่ต้องการให้มีใน Arkwork'}}
+                    <input type="text" class="form-control" name="aboutark1">
+                  </div>
+                  <div class="col-sm-4">
+                    {{'ข้อความ Arkwork'}}
+                    <input type="text" class="form-control" name="messageark1">
+                  </div>
+                  <div class="col-sm-4">
+                    {{'Mood & Tone ของ Arkwork (File ตัวอย่าง)'}}
+                    <input type="file" class="form-control" name="arkfile1">
+                  </div>
+                </div>
+              </div>
+              <div class="py-2">
+                <div class="row">
+                  <p><h4 align="center">{{'Arkwork 2'}}</h4></p>
+                  <div class="col-sm-4">
+                    {{'อธิบายสิ่งที่ต้องการให้มีใน Arkwork'}}
+                    <input type="text" class="form-control" name="aboutark2">
+                  </div>
+                  <div class="col-sm-4">
+                    {{'ข้อความ Arkwork'}}
+                    <input type="text" class="form-control" name="messageark2">
+                  </div>
+                  <div class="col-sm-4">
+                    {{'Mood & Tone ของ Arkwork (File ตัวอย่าง)'}}
+                    <input type="file" class="form-control" name="arkfile2">
+                  </div>
                 </div>
               </div>
         </div>
@@ -97,15 +138,14 @@
       <br>
       <div class="container p-2 text-center">
           <h3>กรุณาเลือกธีม</h3>
-        </div> 
+      </div> 
         <div class="container">
           <div class="photo__grid">
             <div class="photo__grid--item">
               <p class="img" id="img"></p>
             </div>
+          </div>
         </div>
-      </div>
-      
     </div>
     {{ csrf_field() }}
   </body>

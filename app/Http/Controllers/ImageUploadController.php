@@ -26,7 +26,8 @@ class ImageUploadController extends Controller
         if($request){
             $request->validate([
                 'business' => 'required',
-                'web' => 'required'
+                'web' => 'required',
+                'linkweb'=>'required'
             ]);
             $theme = new temtheme;
             $theme->business_id = $request->business;

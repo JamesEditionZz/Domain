@@ -20,7 +20,7 @@
       @endforeach
       </select>
       <strong>ลิ้งเว็ป</strong>
-      <input type="text" name="linkweb">
+      <input type="text" name="linkweb" value="">
       <div class="post_button">
         <button type="submit" class="btn btn-success">Add</button>
       </div>

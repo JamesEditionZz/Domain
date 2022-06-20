@@ -12,7 +12,7 @@ class TemplateController extends Controller
     function index(){
         $business=DB::table('tembusinesses')->get();
         // $img = DB::table('temthemes')->get();
-        return view('template')->with('business',$business);
+        return view('dashboard')->with('business',$business);
         // return view('template')->with('image',$img);
     }
 

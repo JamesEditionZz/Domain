@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      
       <style>
         .photo__grid{
           margin-top: 2rem;
@@ -148,7 +148,7 @@
         </div>
     </div>
     {{ csrf_field() }}
-  </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
       $('.busi').change(function(){
           if($(this).val()!=''){
@@ -179,5 +179,8 @@
           }
       });
     </script>
+  </body>
+    
+    
 </x-slot>
 </x-app-layout>

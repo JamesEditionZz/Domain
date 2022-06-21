@@ -1,13 +1,12 @@
 <x-app-layout>
     <x-slot name="header">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="{{ asset('css/font.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Josefin+Sans:wght@100&family=Oswald:wght@200&display=swap" rel="stylesheet">
         <div class="container">
             <div class="bg-warning font-header">
                 <p>
-                <h3 align="center">{{ 'พิเศษสำหรับแพ็คเกจรายเดือน 1699 / 2599 / 3599' }}</h3>
+                <h3 align="center">{{ 'พิเศษสำหรับแพ็คเกจรายเดือน ฿1699 / ฿2599 / ฿3599' }}</h3>
                 </p>
                 <p>
                 <h3 align="center">{{ 'รับฟรี!! ออกแบบ Video Light Weight Motion Graphic (เซ็นสัญญา 2 ปี)' }}</h3>
@@ -27,21 +26,15 @@
             .accordion-body {
                 padding: 0;
             }
-            .photo__grid{
-              margin-top: 2rem;
-              display: grid;
-              grid-template-columns: 1fr 1fr;
-              float: left;
-              grid-gap: 2rem;
+
+            .font-Oswald{
+                font-family: 'Oswald', sans-serif;
             }
-            .photo__grid--item{
-              width: 100%;
-              height: 100%;
+            .font-Cardo{
+                font-family: 'Cardo', serif;
             }
-            .photo__grid--item p{
-              width: 100%;
-              height: 100%;
-              margin:  auto auto;
+            .font-JosefinSans{
+                font-family: 'Josefin Sans', sans-serif;
             }
         </style>
         <div class="py-2">
@@ -2278,308 +2271,162 @@
                                 </div>
                                 <p id="pack" align="center" class="mt-5"
                                     style="background-color: rgb(18, 97, 93)"></p>
-                                    
-                            </div>
+                                <div id="pkfree" style="display: none" align="center">
+                                        <img src="{{ asset('/public/image/202206110825Untitled.png') }}" alt="" style="width: 300px; height:500px;">
+                                </div>
 
+                                <div id="pk1" style="display: none">
+                                    <div class="py-1">
+                                        <div class="container">
+                                            <div class="py-3">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        {{ 'เลือกประเภทธุรกิจ' }}
+                                                        <select class="form-select busi" name="busi"
+                                                            id="busi">
+                                                            <option>{{ 'กรุณาเลือกธีม' }}</option>
+                                                            @foreach ($business as $row)
+                                                                <option value="{{ $row->id }}">
+                                                                    {{ $row->name_business }}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        {{ 'ประเภทเว็บไซต์' }}
+                                                        <select class="form-select web" name="busi"
+                                                            id="web">
+                                                            <option></option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    {{ 'Logo สำหรับใช้ในเว็บไซต์' }}
+                                                    <input type="file" class="form-control" name="logo">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    {{ 'ไฟล์ CI (สี,ฟ้อน,การจัดวาง)' }}
+                                                    <input type="file" class="form-control" name="CI">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    {{ 'รายละเอียดเนื้อหา (ไฟล์ Word)' }}
+                                                    <input type="file" class="form-control" name="word">
+                                                </div>
+                                            </div>
+                                            <div class="py-3">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        {{ 'เมนูที่ต้องการ (ไฟล์ Word)' }}
+                                                        <input type="file" class="form-control" name="menu">
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        {{ 'รูปสินค้า หรือ บริการ (ไฟล์ JPEG,PNG)' }}
+                                                        <input type="file" class="form-control" name="product">
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        {{ 'รายละเอียดสินค้าหรือบริการทั้งหมด (ไฟล์ Word)' }}
+                                                        <input type="file" class="form-control" name="menu">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="py-2">
+                                                <div class="row">
+                                                    <p>
+                                                    <h4 align="center">{{ 'สีที่อยากได้และสไตล์ของตัวหนังสือ' }}
+                                                    </h4>
+                                                    </p>
+                                                    <div class="col-sm-2">
+                                                        <p>{{ 'สีที่ 1 (สีหลัก 70%)' }}</p>
+                                                        <input type="color" class="form-control" name="color1">
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <p>{{ 'สีที่ 2 (สีรอง 20%)' }}</p>
+                                                        <input type="color" class="form-control" name="color2">
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <p>{{ 'สีที่ 3 (สีรอง 10%)' }}</p>
+                                                        <input type="color" class="form-control" name="color3">
+                                                    </div>
+                                                    <div class="col-sm-1">
+
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <p align="center">{{ 'สไตล์ตัวหนังสือ' }}</p>
+                                                        <input type="radio" id="Oswald" name="Font" value="Oswald">
+                                                        <label for="Oswald" class="font-Oswald" style="font-size: 24px">Oswald</label><span style="padding: 30px"></span>
+                                                        <input type="radio" id="Josefin Sans" name="Font" value="Josefin Sans">
+                                                        <label for="Josefin Sans" class="font-JosefinSans" style="font-size: 24px">Josefin Sans</label><span style="padding: 30px"></span>
+                                                        <input type="radio" id="Cardo" name="Font" value="Cardo">
+                                                        <label for="Cardo" class="font-Cardo" style="font-size: 24px">Cardo</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="py-2">
+                                                <div class="row">
+                                                    <p>
+                                                    <h4 align="center">{{ 'Arkwork 1' }}</h4>
+                                                    </p>
+                                                    <div class="col-sm-4">
+                                                        {{ 'อธิบายสิ่งที่ต้องการให้มีใน Arkwork' }}
+                                                        <input type="text" class="form-control"
+                                                            name="aboutark1">
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        {{ 'ข้อความ Arkwork' }}
+                                                        <input type="text" class="form-control"
+                                                            name="messageark1">
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        {{ 'Mood & Tone ของ Arkwork (File ตัวอย่าง)' }}
+                                                        <input type="file" class="form-control"
+                                                            name="arkfile1">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="py-2">
+                                                <div class="row">
+                                                    <p>
+                                                    <h4 align="center">{{ 'Arkwork 2' }}</h4>
+                                                    </p>
+                                                    <div class="col-sm-4">
+                                                        {{ 'อธิบายสิ่งที่ต้องการให้มีใน Arkwork' }}
+                                                        <input type="text" class="form-control"
+                                                            name="aboutark2">
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        {{ 'ข้อความ Arkwork' }}
+                                                        <input type="text" class="form-control"
+                                                            name="messageark2">
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        {{ 'Mood & Tone ของ Arkwork (File ตัวอย่าง)' }}
+                                                        <input type="file" class="form-control"
+                                                            name="arkfile2">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="container p-2 text-center">
+                                        <h3>กรุณาเลือกธีม</h3>
+                                    </div>
+                                    <div class="grid-container">
+                                        <table>
+                                            <tr>
+                                                <td class="img" \n style="width: 20%" align="center"></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                             {{-- ------------------------------------------------------------------------------------------------------------------------------------------------- --}}
 
-                            <div id="pkfree" style="display: none">
-                                <img src="{{ asset('/public/image/202206110825Untitled.png') }}" alt="" style="width: 300px; height:500px;">
-                            </div>
-
-                            <div id="pk1" style="display: none">
-                                <div class="py-1">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                {{ 'Logo สำหรับใช้ในเว็บไซต์' }}
-                                                <input type="file" class="form-control" name="logo">
-                                            </div>
-                                            <div class="col-sm-4">
-                                                {{ 'ไฟล์ CI (สี,ฟ้อน,การจัดวาง)' }}
-                                                <input type="file" class="form-control" name="CI">
-                                            </div>
-                                            <div class="col-sm-4">
-                                                {{ 'รายละเอียดเนื้อหา (ไฟล์ Word)' }}
-                                                <input type="file" class="form-control" name="word">
-                                            </div>
-                                        </div>
-                                        <div class="py-3">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    {{ 'เมนูที่ต้องการ (ไฟล์ Word)' }}
-                                                    <input type="file" class="form-control" name="menu">
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    {{ 'รูปสินค้า หรือ บริการ (ไฟล์ JPEG,PNG)' }}
-                                                    <input type="file" class="form-control" name="product">
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    {{ 'รายละเอียดสินค้าหรือบริการทั้งหมด (ไฟล์ Word)' }}
-                                                    <input type="file" class="form-control" name="menu">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="py-1">
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    {{ 'เลือกประเภทธุรกิจ' }}
-                                                    <select class="form-select busi" name="busi"
-                                                        id="busi">
-                                                        <option>{{ 'กรุณาเลือกธีม' }}</option>
-                                                        @foreach ($business as $row)
-                                                            <option value="{{ $row->id }}">
-                                                                {{ $row->name_business }}</option>
-                                                        @endforeach
-                                                    </select>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    {{ 'ประเภทเว็บไซต์' }}
-                                                    <select class="form-select web" name="busi" id="web">
-                                                        <option></option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="py-2">
-                                            <div class="row">
-                                                <p>
-                                                <h4 align="center">{{ 'สีที่อยากได้และสไตล์ของตัวหนังสือ' }}</h4>
-                                                </p>
-                                                <div class="col-sm-2">
-                                                    <p>{{ 'สีที่ 1 (สีหลัก 70%)' }}</p>
-                                                    <input type="color" class="form-control" name="color1">
-                                                </div>
-                                                <div class="col-sm-2">
-                                                    <p>{{ 'สีที่ 2 (สีรอง 20%)' }}</p>
-                                                    <input type="color" class="form-control" name="color2">
-                                                </div>
-                                                <div class="col-sm-2">
-                                                    <p>{{ 'สีที่ 3 (สีรอง 10%)' }}</p>
-                                                    <input type="color" class="form-control" name="color3">
-                                                </div>
-                                                <div class="col-sm-1">
-
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <p align="center">{{ 'สไตล์ตัวหนังสือ' }}</p>
-                                                    <input type="radio" id="Oswald" name="Font"
-                                                        value="Oswald">
-                                                    <label for="Oswald">Oswald</label><span
-                                                        style="padding: 30px"></span>
-                                                    <input type="radio" id="Josefin Sans" name="Font"
-                                                        value="Josefin Sans">
-                                                    <label for="Josefin Sans">Josefin Sans</label><span
-                                                        style="padding: 30px"></span>
-                                                    <input type="radio" id="Cardo" name="Font"
-                                                        value="Cardo">
-                                                    <label for="Cardo">Cardo</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="py-2">
-                                            <div class="row">
-                                                <p>
-                                                <h4 align="center">{{ 'Arkwork 1' }}</h4>
-                                                </p>
-                                                <div class="col-sm-4">
-                                                    {{ 'อธิบายสิ่งที่ต้องการให้มีใน Arkwork' }}
-                                                    <input type="text" class="form-control" name="aboutark1">
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    {{ 'ข้อความ Arkwork' }}
-                                                    <input type="text" class="form-control" name="messageark1">
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    {{ 'Mood & Tone ของ Arkwork (File ตัวอย่าง)' }}
-                                                    <input type="file" class="form-control" name="arkfile1">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="py-2">
-                                            <div class="row">
-                                                <p>
-                                                <h4 align="center">{{ 'Arkwork 2' }}</h4>
-                                                </p>
-                                                <div class="col-sm-4">
-                                                    {{ 'อธิบายสิ่งที่ต้องการให้มีใน Arkwork' }}
-                                                    <input type="text" class="form-control" name="aboutark2">
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    {{ 'ข้อความ Arkwork' }}
-                                                    <input type="text" class="form-control" name="messageark2">
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    {{ 'Mood & Tone ของ Arkwork (File ตัวอย่าง)' }}
-                                                    <input type="file" class="form-control" name="arkfile2">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="container p-2 text-center">
-                                    <h3>กรุณาเลือกธีม</h3>
-                                </div>
-                                <div class="container">
-                                    <div class="photo__grid">
-                                        <div class="photo__grid--item">
-                                            <p class="img" id="img" style="width: 300px; height: 500px;"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                            <div id="pk1" style="display: none">
-                                <div class="py-1">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                {{ 'Logo สำหรับใช้ในเว็บไซต์' }}
-                                                <input type="file" class="form-control" name="logo">
-                                            </div>
-                                            <div class="col-sm-4">
-                                                {{ 'ไฟล์ CI (สี,ฟ้อน,การจัดวาง)' }}
-                                                <input type="file" class="form-control" name="CI">
-                                            </div>
-                                            <div class="col-sm-4">
-                                                {{ 'รายละเอียดเนื้อหา (ไฟล์ Word)' }}
-                                                <input type="file" class="form-control" name="word">
-                                            </div>
-                                        </div>
-                                        <div class="py-3">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    {{ 'เมนูที่ต้องการ (ไฟล์ Word)' }}
-                                                    <input type="file" class="form-control" name="menu">
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    {{ 'รูปสินค้า หรือ บริการ (ไฟล์ JPEG,PNG)' }}
-                                                    <input type="file" class="form-control" name="product">
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    {{ 'รายละเอียดสินค้าหรือบริการทั้งหมด (ไฟล์ Word)' }}
-                                                    <input type="file" class="form-control" name="menu">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="py-1">
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    {{ 'เลือกประเภทธุรกิจ' }}
-                                                    <select class="form-select busi" name="busi"
-                                                        id="busi">
-                                                        <option>{{ 'กรุณาเลือกธีม' }}</option>
-                                                        @foreach ($business as $row)
-                                                            <option value="{{ $row->id }}">
-                                                                {{ $row->name_business }}</option>
-                                                        @endforeach
-                                                    </select>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    {{ 'ประเภทเว็บไซต์' }}
-                                                    <select class="form-select web" name="busi" id="web">
-                                                        <option></option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="py-2">
-                                            <div class="row">
-                                                <p>
-                                                <h4 align="center">{{ 'สีที่อยากได้และสไตล์ของตัวหนังสือ' }}</h4>
-                                                </p>
-                                                <div class="col-sm-2">
-                                                    <p>{{ 'สีที่ 1 (สีหลัก 70%)' }}</p>
-                                                    <input type="color" class="form-control" name="color1">
-                                                </div>
-                                                <div class="col-sm-2">
-                                                    <p>{{ 'สีที่ 2 (สีรอง 20%)' }}</p>
-                                                    <input type="color" class="form-control" name="color2">
-                                                </div>
-                                                <div class="col-sm-2">
-                                                    <p>{{ 'สีที่ 3 (สีรอง 10%)' }}</p>
-                                                    <input type="color" class="form-control" name="color3">
-                                                </div>
-                                                <div class="col-sm-1">
-
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <p align="center">{{ 'สไตล์ตัวหนังสือ' }}</p>
-                                                    <input type="radio" id="Oswald" name="Font"
-                                                        value="Oswald">
-                                                    <label for="Oswald">Oswald</label><span
-                                                        style="padding: 30px"></span>
-                                                    <input type="radio" id="Josefin Sans" name="Font"
-                                                        value="Josefin Sans">
-                                                    <label for="Josefin Sans">Josefin Sans</label><span
-                                                        style="padding: 30px"></span>
-                                                    <input type="radio" id="Cardo" name="Font"
-                                                        value="Cardo">
-                                                    <label for="Cardo">Cardo</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="py-2">
-                                            <div class="row">
-                                                <p>
-                                                <h4 align="center">{{ 'Arkwork 1' }}</h4>
-                                                </p>
-                                                <div class="col-sm-4">
-                                                    {{ 'อธิบายสิ่งที่ต้องการให้มีใน Arkwork' }}
-                                                    <input type="text" class="form-control" name="aboutark1">
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    {{ 'ข้อความ Arkwork' }}
-                                                    <input type="text" class="form-control" name="messageark1">
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    {{ 'Mood & Tone ของ Arkwork (File ตัวอย่าง)' }}
-                                                    <input type="file" class="form-control" name="arkfile1">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="py-2">
-                                            <div class="row">
-                                                <p>
-                                                <h4 align="center">{{ 'Arkwork 2' }}</h4>
-                                                </p>
-                                                <div class="col-sm-4">
-                                                    {{ 'อธิบายสิ่งที่ต้องการให้มีใน Arkwork' }}
-                                                    <input type="text" class="form-control" name="aboutark2">
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    {{ 'ข้อความ Arkwork' }}
-                                                    <input type="text" class="form-control" name="messageark2">
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    {{ 'Mood & Tone ของ Arkwork (File ตัวอย่าง)' }}
-                                                    <input type="file" class="form-control" name="arkfile2">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="container p-2 text-center">
-                                    <h3>กรุณาเลือกธีม</h3>
-                                </div>
-                                <div class="container">
-                                    <div class="photo__grid">
-                                        <div class="photo__grid--item">
-                                            <p class="img" id="img" style="width: 300px; height: 500px;"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
+                    </table>
                 </div>
-                </table>
             </div>
-        </div>
         </div>
         {{ csrf_field() }}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
